@@ -273,6 +273,10 @@ nav a:not(:last-of-type) {
   margin: 25px 0;
 }
 
+.details-item:not(:last-child){
+	padding-right: 20px;
+}
+
 .details-item-half {
   flex-basis: 50%;
 }
@@ -325,5 +329,26 @@ nav a:not(:last-of-type) {
 
   header {
 	  padding: 10px 10%;
+	  flex-flow: column-reverse;
+  }
+
+  .logo {
+	  margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  header {
+	  padding: 10px 5%;
+	  width: 100%
+  }
+
+  .details-row {
+	  display: flex;
+	  flex-direction: column;
   }
 }
