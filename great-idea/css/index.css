@@ -156,6 +156,10 @@ a {
   color: black;
 }
 
+h3 {
+	font-size: 24px;
+}
+
 /* HEADER */
 
 hr {
@@ -371,7 +375,7 @@ nav a:not(:last-of-type) {
 }
 
 .services-btn:hover {
-  background: #6c6c6c;
+  background: #1c1c1c;
   color: white;
 }
 
@@ -389,6 +393,19 @@ nav a:not(:last-of-type) {
 
 .footer-col img {
   width: 100%;
+}
+
+.footer-col ul {
+	margin-top: 20px;
+}
+
+.footer-col li {
+	line-height: 2;
+}
+
+.footer-col li::before {
+	content: "■";
+	margin-right: 10px;
 }
 
 /* MEDIA QUERIES */
