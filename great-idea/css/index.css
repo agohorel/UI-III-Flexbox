@@ -166,6 +166,7 @@ hr {
 .container {
   width: 50%;
   margin: 0 auto;
+  transition: .3s ease-out all;
 }
 
 header {
@@ -197,6 +198,15 @@ nav a:hover {
 
 nav a:not(:last-of-type) {
   margin-right: 4vw;
+}
+
+.logo {
+  transition: 0.2s ease-in-out all;
+}
+
+.logo:hover {
+  filter: invert(100%);
+  transform: scale(1.05);
 }
 
 /* HERO */
@@ -266,15 +276,15 @@ nav a:not(:last-of-type) {
 /* DETAILS */
 
 .details-row {
-	display: flex;
+  display: flex;
 }
 
 .details-item {
   margin: 25px 0;
 }
 
-.details-item:not(:last-child){
-	padding-right: 20px;
+.details-item:not(:last-child) {
+  padding-right: 20px;
 }
 
 .details-item-half {
@@ -286,7 +296,7 @@ nav a:not(:last-of-type) {
 }
 
 .middle-img {
-	width: 100%;
+  width: 100%;
 }
 
 .mid-image {
@@ -310,6 +320,77 @@ nav a:not(:last-of-type) {
   margin-bottom: 100px;
 }
 
+/* SERVICES HEADER */
+
+.services-header {
+  margin-top: 100px;
+}
+
+.services-header img {
+  width: 100%;
+}
+
+.services-header h1 {
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+.spacer {
+  margin: 40px 0;
+}
+
+/* SERVICES GRID */
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  width: 48%;
+  border: 1px solid black;
+  padding: 20px;
+  background: #eee;
+}
+
+.service-card:not(:nth-last-of-type(-n + 2)) {
+  margin-bottom: 4%;
+}
+
+.service-card p {
+  margin-bottom: 30px;
+}
+
+.services-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 20px;
+  transition: 0.2s ease-out all;
+  background: white;
+}
+
+.services-btn:hover {
+  background: #6c6c6c;
+  color: white;
+}
+
+/* SERVICES FOOTER */
+
+.services-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.footer-col {
+  flex-basis: 48%;
+}
+
+.footer-col img {
+  width: 100%;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1600px) {
@@ -318,7 +399,7 @@ nav a:not(:last-of-type) {
   }
 
   header {
-	  padding: 10px 15%;
+    padding: 10px 15%;
   }
 }
 
@@ -328,12 +409,16 @@ nav a:not(:last-of-type) {
   }
 
   header {
-	  padding: 10px 10%;
-	  flex-flow: column-reverse;
+    padding: 10px 10%;
+    flex-flow: column-reverse;
   }
 
   .logo {
-	  margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .services-header {
+    margin-top: 135px;
   }
 }
 
@@ -343,12 +428,24 @@ nav a:not(:last-of-type) {
   }
 
   header {
-	  padding: 10px 5%;
-	  width: 100%
+    padding: 10px 5%;
+    width: 100%;
   }
 
   .details-row {
-	  display: flex;
-	  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .service-card:not(:last-of-type) {
+    margin-bottom: 4%;
   }
 }
