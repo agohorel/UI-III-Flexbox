@@ -453,6 +453,14 @@ nav a:not(:last-of-type) {
     margin-bottom: 20px;
   }
 
+  .hero {
+	  flex-flow: column-reverse;
+  }
+
+  .hero img {
+	  margin-bottom: 20px;
+  }
+
   .services-header {
     margin-top: 135px;
   }
